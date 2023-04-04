@@ -5,8 +5,8 @@ from django.shortcuts import render
 import datetime
 
 # Create your views here.
-def test(request):
+def funny(request):
     now = datetime.datetime
-    return render(request, "index.html", {
+    return render(request, "christmas.html", {
         "new": now.month == 12 and now.day == 25
     })
