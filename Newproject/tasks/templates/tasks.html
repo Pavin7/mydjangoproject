@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+
+
+
+{% extends "layout.html" %}
+
+{% block body  %}
+{% for task in tasks %}
+
+<li>{{ task }}</li>
+
+
+{% endfor %}
+
+    <a href="{% url 'tasks:add' %}">add new task</a>
+
+{% endblock %}
